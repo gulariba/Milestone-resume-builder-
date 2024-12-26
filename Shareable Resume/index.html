@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Resume</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 id="username">Areeba Ahmed Khan</h1>
+      <p>Frontend Developer | Digital Marketer | Educator</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p id="about-me">I bring creativity, passion, and precision to every line of code I write. With a knack for solving complex problems, I aim to create experiences that captivate users.</p>
+      <button class="btn" id="more-info">More About Me</button>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skill">
+        <span>HTML</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width: 90%"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A responsive portfolio showcasing my skills and creativity.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: areeba@example.com</p>
+      <p>Phone: +92 300 1234567</p>
+    </section>
+
+    <!-- Share and Download Options -->
+    <section id="share-download">
+      <h2>Share or Download</h2>
+      <p>Share your resume via the link below:</p>
+      <input type="text" id="resume-link" value="areeba.vercel.app/resume" readonly>
+      <button onclick="copyLink()">Copy Link</button>
+      <br><br>
+      <button onclick="downloadResume()">Download as PDF</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Areeba Ahmed Khan</p>
+  </footer>
+
+  <script>
+    function copyLink() {
+      const link = document.getElementById("resume-link");
+      link.select();
+      document.execCommand("copy");
+      alert("Resume link copied to clipboard!");
+    }
+
+    function downloadResume() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      // Add content from the HTML to the PDF
+      doc.text("Resume of Areeba Ahmed Khan", 10, 10);
+      doc.text("About Me: I bring creativity, passion, and precision...", 10, 20);
+      doc.text("Skills: HTML, CSS, JavaScript", 10, 30);
+      doc.text("Contact: areeba@example.com", 10, 40);
+
+      // Save the PDF
+      doc.save("resume.pdf");
+    }
+  </script>
+</body>
+</html>
