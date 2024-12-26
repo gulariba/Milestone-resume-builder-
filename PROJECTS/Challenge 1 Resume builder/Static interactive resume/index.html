@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Resume</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="fade-in">Areeba Ahmed Khan</h1>
+      <p class="fade-in delay">Frontend Developer | Digital Marketer | Educator</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p class="slide-in">I bring creativity, passion, and precision to every line of code I write. With a knack for solving complex problems, I aim to create experiences that captivate users.</p>
+      <button class="btn" id="more-info">More About Me</button>
+      <div id="popup" class="hidden">
+        <p>I love sipping chai while brainstorming innovative ideas. Let’s collaborate and create something extraordinary!</p>
+        <button class="btn" id="close-popup">Close</button>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skill fade-in">
+        <span>HTML</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width: 90%"></div>
+        </div>
+      </div>
+      <div class="skill fade-in delay">
+        <span>CSS</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width: 85%"></div>
+        </div>
+      </div>
+      <div class="skill fade-in delay-2">
+        <span>TypeScript</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width: 75%"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-card hover-grow">
+        <h3>Portfolio Website</h3>
+        <p>A responsive portfolio showcasing my skills and creativity.</p>
+      </div>
+      <div class="project-card hover-grow">
+        <h3>E-commerce Store</h3>
+        <p>An elegant online fashion store built with modern frameworks.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: areeba@example.com</p>
+      <p>Phone: +92 300 1234567</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Areeba Ahmed Khan</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
